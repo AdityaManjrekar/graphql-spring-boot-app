@@ -1,3 +1,4 @@
+#Supported Currencies USD,EUR and CAD
 enum Currency{
     USD
     EUR
