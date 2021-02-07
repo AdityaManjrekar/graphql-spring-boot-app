@@ -1,4 +1,4 @@
-package com.graphql.app.resolver;
+package com.graphql.app.resolver.bank.query;
 
 import com.graphql.app.data.BankAccount;
 import com.graphql.app.data.Client;
@@ -16,12 +16,6 @@ public class BankAccountResolver implements GraphQLQueryResolver {
         return BankAccount.builder()
                 .id(id)
                 .currency(Currency.CAD)
-                .client(Client.builder()
-                        .id(id)
-                        .firstName("Aditya")
-                        .middleNames(Arrays.asList("Manjrekar","Rane"))
-                        .lastName("Manjrekar")
-                        .build())
                 .build();
     }
 }

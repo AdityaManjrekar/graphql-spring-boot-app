@@ -1,0 +1,8 @@
+query GET_BANK_ACCOUNT($id :ID){
+    bankaccount(id : $id){
+        client {
+            firstName
+            lastName
+        }
+    }
+}
