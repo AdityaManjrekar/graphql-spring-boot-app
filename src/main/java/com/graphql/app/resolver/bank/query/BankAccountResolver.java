@@ -3,6 +3,8 @@ package com.graphql.app.resolver.bank.query;
 import com.graphql.app.data.BankAccount;
 import com.graphql.app.data.Client;
 import com.graphql.app.data.Currency;
+import graphql.GraphQLException;
+import graphql.GraphqlErrorException;
 import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.stereotype.Component;
 
@@ -13,9 +15,10 @@ import java.util.UUID;
 @Component
 public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankaccount(UUID id){
-        return BankAccount.builder()
+        throw new GraphQLException("Client unavailable");
+       /* return BankAccount.builder()
                 .id(id)
                 .currency(Currency.CAD)
-                .build();
+                .build();*/
     }
 }
