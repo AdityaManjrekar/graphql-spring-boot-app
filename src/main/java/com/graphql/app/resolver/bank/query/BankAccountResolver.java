@@ -15,7 +15,7 @@ import java.util.UUID;
 @Component
 public class BankAccountResolver implements GraphQLQueryResolver {
     public BankAccount bankaccount(UUID id){
-        throw new GraphQLException("Client unavailable");
+        throw new RuntimeException("Client unavailable");
        /* return BankAccount.builder()
                 .id(id)
                 .currency(Currency.CAD)
