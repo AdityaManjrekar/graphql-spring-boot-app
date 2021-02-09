@@ -4,5 +4,18 @@ query GET_BANK_ACCOUNT($id :ID){
             firstName
             lastName
         }
+        assets{
+        name
+        }
     }
+}
+
+mutation CREATE_BANK_ACCOUNT {
+  createBankAccount(input:{
+    firstName : "Madhumati"
+  }){
+    client{
+      firstName
+    }
+  }
 }
