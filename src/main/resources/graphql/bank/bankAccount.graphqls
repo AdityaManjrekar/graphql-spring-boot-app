@@ -3,4 +3,6 @@ type BankAccount {
     client: Client!
     assets: [Assets!]!
     currency: Currency!
+    createdAt: DateTime
+    createdOn: Date
 }
