@@ -13,9 +13,11 @@ query GET_BANK_ACCOUNT($id :ID){
 mutation CREATE_BANK_ACCOUNT {
   createBankAccount(input:{
     firstName : "Madhumati"
+      age : 1
   }){
     client{
       firstName
     }
+    createdAt
   }
 }

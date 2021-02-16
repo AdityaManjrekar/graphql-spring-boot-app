@@ -25,9 +25,9 @@ public class ClientResolver implements GraphQLResolver<BankAccount> {
                      return DataFetcherResult.<Client>newResult()
                              .data(Client.builder()
                                      .id(bankAccount.getId())
-                                     .firstName("Aditya")
-                                     .middleNames(Arrays.asList("Manjrekar","Rane"))
-                                     .lastName("Manjrekar")
+                                     .firstName(bankAccount.getClient().getFirstName())
+                                     .middleNames(bankAccount.getClient().getMiddleNames())
+                                     .lastName(bankAccount.getClient().getLastName())
                                      .build())
                              .error(new GenericGraphQLError("Could not get client infomration"))
                              .build();
